@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+/*font-family: 'Poppins', sans-serif;*/
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {  
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --dark: hsl(234, 12%, 34%);
+    --grayblue: hsl(229, 6%, 66%);
+    --light:  hsl(0, 0%, 98%);
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5em;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+span, h3{
+    display: inline-block;
+    width: 100%;
+    color: var(--dark);
+    font-weight: 600;
+    margin-top: 0.5em;
+}
+
+h2{
+    color: var(--grayblue);
+    font-weight: 400;
+    margin: 1em;
+}
+
+p{
+    color: var(--grayblue);
+    font-weight: 200;
+    margin: 0 1em;
+}
+.grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    text-align: left;
+}
+.card{
+    margin-bottom: 2em;
+    max-width: 315px;
+    width: 100%;
+    border-radius: 4px;
+    max-height: 220px;
+    height: 100%;
+    padding: 1em 1.5em;
+    box-shadow: 0 3px 10px -1px var(--grayblue);
+}
+.grid p{
+    margin: 0;
+    font-size: 0.8em;
+    margin-top: 0.3em;
+}
+
+img{
+    float: right;
+    display: block;
+    margin-top: 1.5em;
+}
+
+#supervisor{
+    border-top: 4px solid var(--cyan);
+    margin-top: 4em;
+}
+
+#team-builder{
+    border-top: 4px solid var(--red);
+}
+
+#karma{
+    border-top: 4px solid var(--orange);
+}
+
+#calculator{
+    border-top: 4px solid var(--blue);
+}
+
+@media(min-width:800px){
+    .header{
+        max-width: 45%; 
+        margin-bottom: 2em;
+    }
+    h2{
+        font-size: 1.8em;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+    }
+    #supervisor{
+        margin-top: 0;
+        transform: translateY(50%);
+    }
+
+    #karma{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #calculator{
+        transform: translateY(50%);
+    }
+    
+
+}
